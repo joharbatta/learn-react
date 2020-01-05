@@ -4,24 +4,25 @@ import Counter from "./Components/Counter"
 
 class App extends Component
 {
+  //here is used constructor method for count in decremenet
+  //and arrow functions overcome this so its that
   constructor() {
     super()
-    this.increaseCount=this.increaseCount.bind(this)
+    this.decreaseCount=this.decreaseCount.bind(this)
   }
   state={
     count: 0
   }
-  increaseCount()
-  {
+  increaseCount=()=>{
     this.setState({count: this.state.count+1})
   }
   decreaseCount()
   {
-    console.log("Decreased");
+    this.setState({count: this.state.count-1})
   }
-  resetCount()
+  resetCount=()=>
   {
-    console.log("RESET");
+    this.setState({count: 0})
   }
   render()
   {
