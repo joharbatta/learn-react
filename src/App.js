@@ -29,7 +29,12 @@ class App extends Component
   return (
     <div>
     <Greetings title="Good Afternoon" message="learning react" />
-    <Counter  resetCount={this.resetCount} decreaseCount={this.decreaseCount} increaseCount={this.increaseCount} count={this.state.count}/>
+    <Counter  
+      resetCount={this.resetCount} 
+      decreaseCount={this.decreaseCount} 
+      increaseCount={this.increaseCount} 
+      count={this.state.count}
+      />
     </div>
   );
   }
