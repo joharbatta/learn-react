@@ -1,6 +1,9 @@
 import React,{Component} from 'react';
 import Greetings from "./Components/Greetings"
 import Counter from "./Components/Counter"
+import Componentone from './Components/Componentone';
+import Componenttwo from './Components/Componenttwo';
+import Componentfive from "./Components/Component5"
 
 class App extends Component
 {
@@ -10,7 +13,7 @@ class App extends Component
     super()
     this.decreaseCount=this.decreaseCount.bind(this)
   }
-  state={
+  state={ 
     count: 0
   }
   increaseCount=()=>{
@@ -35,6 +38,9 @@ class App extends Component
       increaseCount={this.increaseCount} 
       count={this.state.count}
       />
+      <Componentone/>
+      <Componenttwo name="abc" count="10">JAtt</Componenttwo>
+      <Componentfive/>
     </div>
   );
   }
