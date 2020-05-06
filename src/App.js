@@ -3,7 +3,9 @@ import Greetings from "./Components/Greetings"
 import Counter from "./Components/Counter"
 import Componentone from './Components/Componentone';
 import Componenttwo from './Components/Componenttwo';
-import Componentfive from "./Components/Component5"
+import Componentfive from "./Components/Component5";
+import App1 from '../src/Components/redux/App';
+import UA1 from "../src/Components/udacity/assign1/src/App"
 
 class App extends Component
 {
@@ -41,6 +43,8 @@ class App extends Component
       <Componentone/>
       <Componenttwo name="abc" count="10">JAtt</Componenttwo>
       <Componentfive/>
+      <App1/>
+      <UA1/>
     </div>
   );
   }
