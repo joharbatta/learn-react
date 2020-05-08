@@ -7,7 +7,7 @@ import Componentfive from "./Components/Component5";
 import App1 from '../src/Components/redux/App';
 import UA1 from "../src/Components/udacity/assign1/src/App"
 import UA2 from "../src/Components/udacity/assign2/src/App"
-
+import UA4 from "../src/Components/udacity/assign4/src/App"
 class App extends Component
 {
   //here is used constructor method for count in decremenet
@@ -47,6 +47,7 @@ class App extends Component
       <App1/>
       <UA1/>
       <UA2/>
+      <UA4/>
     </div>
   );
   }
