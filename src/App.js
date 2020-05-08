@@ -6,6 +6,7 @@ import Componenttwo from './Components/Componenttwo';
 import Componentfive from "./Components/Component5";
 import App1 from '../src/Components/redux/App';
 import UA1 from "../src/Components/udacity/assign1/src/App"
+import UA2 from "../src/Components/udacity/assign2/src/App"
 
 class App extends Component
 {
@@ -45,6 +46,7 @@ class App extends Component
       <Componentfive/>
       <App1/>
       <UA1/>
+      <UA2/>
     </div>
   );
   }
