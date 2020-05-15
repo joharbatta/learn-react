@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Udacity Todo Goals
+        </title>
+    </head>
+<body>
+    <div>
+        <h1>Todo List</h1>
+        <input id="todo" type='text' placeholder="Add todo"/>
+        <button id="todoBtn">Add Todo</button>
+        <ul id='todos'></ul>
+    </div>
+    <div>
+        <h1>Goals List</h1>
+        <input id="goal" type='text' placeholder="Add goal"/>
+        <button id="goalBtn">Add Todo</button>
+        <ul id='goals'></ul>
+    </div>
+    <script type="text/javascript">
+
+    function todos(state=[],action)
+    {
+        if(action.type==='ADD_TODO')
+        {
+            return state.concat([action.todo])
+        }
+        return state
+    }
+
+    function createStore () {
+    // The store should have four parts
+    // 1. The state
+    // 2. Get the state.
+    // 3. Listen to changes on the state.
+    // 4. Update the state
+
+    let state
+    let listeners = []
+
+        const getState = () => state
+        const subscribe=(listener)=>{
+            listeners.push(listener)
+            return()=>{
+                listeners=listeners.filter((l)=>l!==listener)
+            }
+        }
+   
+        return{
+         getState,subscribe
+        }
+    }
+
+    const store=createStore()
+    store.subscribe(()=>{
+        console.log('new state',store.getState())
+    })
+    </script>
+</body>
+</html>
